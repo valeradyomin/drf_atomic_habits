@@ -9,6 +9,7 @@ from habits.services import TelegramBot
 
 tg_bot = TelegramBot()
 
+
 @shared_task
 def send_telegram_notification():
     time_zone = settings.TIME_ZONE
