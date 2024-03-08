@@ -211,8 +211,8 @@ CELERY_TASK_TRACK_STARTED = True
 # Настройки для Celery, чтобы использовать периодические задачи
 CELERY_BEAT_SCHEDULE = {
     'task': {
-        'task': 'path.to.your.task',  # Путь к задаче
-        'schedule': timedelta(minutes=10),  # Расписание выполнения задачи (например, каждые 10 минут)
+        'task': 'habits.tasks.send_telegram_notification',  # Путь к задаче
+        'schedule': timedelta(minutes=1),  # Расписание выполнения задачи (например, каждые 10 минут)
     },
 }
 
@@ -232,4 +232,4 @@ CORS_ALLOW_ALL_ORIGINS = False
 
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 
-DATETIME_FORMAT = 'Y-m-d H:i:s'
+# DATETIME_FORMAT = 'Y-m-d H:i:s'
